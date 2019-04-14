@@ -12,6 +12,7 @@ class CreateNoteViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var createNoteButton: UIButton!
     
     var viewModel: CreateNoteViewModel?
     
@@ -19,6 +20,15 @@ class CreateNoteViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let note = viewModel?.toEditNote {
+            titleTextField.text = note.noteTitle
+            descriptionTextField.text = note.noteText
+            createNoteButton.setTitle("Edit", for: .normal)
+        }
+    }
+    
     @IBAction func didTapBack(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -30,8 +40,9 @@ class CreateNoteViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             return
         }
-        viewModel?.createNote(title: title, text: descriptionTextField.text)
+        ((viewModel?.toEditNote) != nil) ? viewModel?.editNote(title: title, text: descriptionTextField.text) : viewModel?.createNote(title: title, text: descriptionTextField.text)
         titleTextField.text = nil
         descriptionTextField.text = ""
+        self.navigationController?.popViewController(animated: true)
     }
 }

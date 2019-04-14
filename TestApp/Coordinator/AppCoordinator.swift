@@ -34,9 +34,10 @@ class AppCoordinator: NSObject, Coordinator {
 }
 
 extension AppCoordinator: NotesCoordinatorDelegate {
-    func openCreateNote() {
+    func openCreateNote(_ toEditNote: Note? = nil) {
         let vc  = StoryboardScene.Main.createNoteViewController.instantiate()
         vc.viewModel = CreateNoteViewModel(context: context)
+        vc.viewModel?.toEditNote = toEditNote
         show(viewController: vc, window: &window, shouldNavigate: true)
     }
 }

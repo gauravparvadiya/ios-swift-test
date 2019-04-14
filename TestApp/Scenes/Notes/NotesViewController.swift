@@ -11,8 +11,12 @@ class NotesViewController: UIViewController {
     //var presenter: INotesPresenter?
     var viewModel: NotesViewModel?
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var emptyStateView: UIView!
+    
+    var editNote: Note?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -23,11 +27,24 @@ class NotesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel?.getNotes()
+        configUI()
         tableView.reloadData()
     }
     
     @IBAction func didTapCreateNote(_ sender: Any) {
-        viewModel?.coordinator?.openCreateNote()
+        viewModel?.coordinator?.openCreateNote(nil)
+    }
+    
+    func configUI() {
+        guard let vm = viewModel else {
+            return
+        }
+        
+        searchBar.isHidden = !vm.hasNotes
+        tableView.isHidden = !vm.hasNotes
+        emptyStateView.isHidden = vm.hasNotes
+        
+        if vm.hasNotes { tableView.reloadData() }
     }
 }
 
@@ -52,21 +69,41 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let Reject = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+        let reject = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             self.viewModel?.deleteNote(index.row)
             tableView.deleteRows(at: [index], with: .bottom)
+            self.configUI()
         }
-        Reject.backgroundColor = .red
-        return [Reject]
+        reject.backgroundColor = .red
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            self.viewModel?.coordinator?.openCreateNote(self.viewModel?.notes[index.row])
+        }
+        edit.backgroundColor = .blue
+        
+        return [reject, edit]
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+}
+
+extension NotesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchText.isEmpty ? viewModel?.getNotes() : viewModel?.filterNotes(searchText.lowercased())
+        searchBar.showsCancelButton = true
+        tableView.reloadData()
+    }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-        }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel?.getNotes()
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+        tableView.reloadData()
     }
 }

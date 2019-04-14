@@ -11,6 +11,7 @@ import CoreData
 
 class CreateNoteViewModel {
     var context: NSManagedObjectContext
+    var toEditNote: Note?
     
     init(context: NSManagedObjectContext) {
         self.context = context
@@ -24,6 +25,21 @@ class CreateNoteViewModel {
         
         do {
             try context.save()
+        } catch let error as NSError  {
+            print("\(error). \(error.userInfo)")
+        }
+    }
+    
+    func editNote(title: String, text: String) {
+        guard let note = toEditNote else {
+            return
+        }
+        note.noteTitle = title
+        note.noteText = text
+        
+        do {
+            try context.save()
+            toEditNote = nil
         } catch let error as NSError  {
             print("\(error). \(error.userInfo)")
         }
