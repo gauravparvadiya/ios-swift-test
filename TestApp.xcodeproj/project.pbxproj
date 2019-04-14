@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27248B5B223701D000344333 /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27248B5A223701D000344333 /* NotesPresenter.swift */; };
+		27248B5B223701D000344333 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27248B5A223701D000344333 /* NotesViewModel.swift */; };
 		8429C9C71EAECCA8004A5E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429C9C61EAECCA8004A5E2B /* AppDelegate.swift */; };
 		8429C9CC1EAECCA8004A5E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8429C9CA1EAECCA8004A5E2B /* Main.storyboard */; };
 		8429C9D11EAECCA8004A5E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8429C9D01EAECCA8004A5E2B /* Assets.xcassets */; };
 		8429C9D41EAECCA8004A5E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8429C9D21EAECCA8004A5E2B /* LaunchScreen.storyboard */; };
 		8429C9DF1EAECD2C004A5E2B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429C9DE1EAECD2C004A5E2B /* NotesViewController.swift */; };
 		8429C9E21EAECD34004A5E2B /* TestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8429C9E01EAECD34004A5E2B /* TestApp.xcdatamodeld */; };
-		8429C9E41EAECD48004A5E2B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429C9E31EAECD48004A5E2B /* Note.swift */; };
+		F64DC6BA226274F400565254 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6B8226274F400565254 /* Note.swift */; };
+		F64DC6BD22627FAF00565254 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6BC22627FAF00565254 /* NoteTableViewCell.swift */; };
+		F64DC6C022628AFF00565254 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6BF22628AFF00565254 /* AppCoordinator.swift */; };
+		F64DC6C222628B2500565254 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6C122628B2500565254 /* Coordinator.swift */; };
+		F64DC6C522628BB700565254 /* UIWindow+PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6C422628BB700565254 /* UIWindow+PresentedViewController.swift */; };
+		F64DC6C922629AB700565254 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6C822629AB700565254 /* Storyboards.swift */; };
+		F64DC6CB2262A97200565254 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6CA2262A97200565254 /* CreateNoteViewController.swift */; };
+		F64DC6CD2262B56300565254 /* CreateNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6CC2262B56300565254 /* CreateNoteViewModel.swift */; };
+		F64DC6CF2262BF5900565254 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64DC6CE2262BF5900565254 /* Date+DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27248B5A223701D000344333 /* NotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
+		27248B5A223701D000344333 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		8429C9C31EAECCA8004A5E2B /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8429C9C61EAECCA8004A5E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8429C9CB1EAECCA8004A5E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,7 +35,15 @@
 		8429C9D51EAECCA8004A5E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8429C9DE1EAECD2C004A5E2B /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		8429C9E11EAECD34004A5E2B /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
-		8429C9E31EAECD48004A5E2B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F64DC6B8226274F400565254 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F64DC6BC22627FAF00565254 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		F64DC6BF22628AFF00565254 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F64DC6C122628B2500565254 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F64DC6C422628BB700565254 /* UIWindow+PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+PresentedViewController.swift"; sourceTree = "<group>"; };
+		F64DC6C822629AB700565254 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		F64DC6CA2262A97200565254 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		F64DC6CC2262B56300565254 /* CreateNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewModel.swift; sourceTree = "<group>"; };
+		F64DC6CE2262BF5900565254 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				8429C9DE1EAECD2C004A5E2B /* NotesViewController.swift */,
-				27248B5A223701D000344333 /* NotesPresenter.swift */,
+				27248B5A223701D000344333 /* NotesViewModel.swift */,
+				F64DC6BC22627FAF00565254 /* NoteTableViewCell.swift */,
+				F64DC6CA2262A97200565254 /* CreateNoteViewController.swift */,
+				F64DC6CC2262B56300565254 /* CreateNoteViewModel.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -77,6 +96,9 @@
 		8429C9C51EAECCA8004A5E2B /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F64DC6C722628C4900565254 /* Constants */,
+				F64DC6C322628B9E00565254 /* Helpers */,
+				F64DC6BE22628AEB00565254 /* Coordinator */,
 				27248B582237013500344333 /* Scenes */,
 				8429C9DC1EAECD0B004A5E2B /* Model */,
 				8429C9C61EAECCA8004A5E2B /* AppDelegate.swift */,
@@ -91,10 +113,36 @@
 		8429C9DC1EAECD0B004A5E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F64DC6B8226274F400565254 /* Note.swift */,
 				8429C9E01EAECD34004A5E2B /* TestApp.xcdatamodeld */,
-				8429C9E31EAECD48004A5E2B /* Note.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F64DC6BE22628AEB00565254 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F64DC6BF22628AFF00565254 /* AppCoordinator.swift */,
+				F64DC6C122628B2500565254 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F64DC6C322628B9E00565254 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F64DC6C422628BB700565254 /* UIWindow+PresentedViewController.swift */,
+				F64DC6CE2262BF5900565254 /* Date+DateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F64DC6C722628C4900565254 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F64DC6C822629AB700565254 /* Storyboards.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +155,7 @@
 				8429C9BF1EAECCA8004A5E2B /* Sources */,
 				8429C9C01EAECCA8004A5E2B /* Frameworks */,
 				8429C9C11EAECCA8004A5E2B /* Resources */,
+				F64DC6C622628C1C00565254 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -129,7 +178,6 @@
 				TargetAttributes = {
 					8429C9C21EAECCA8004A5E2B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = AUCWMQ5DFY;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -139,6 +187,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -165,16 +214,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F64DC6C622628C1C00565254 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\nswiftgen storyboards -t swift3 \"$PROJECT_DIR/TestApp/\" --output \"$PROJECT_DIR/TestApp/Constants/Storyboards.swift\" --param ignoreTargetModule --param module=TestApp\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8429C9BF1EAECCA8004A5E2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64DC6C222628B2500565254 /* Coordinator.swift in Sources */,
+				F64DC6CF2262BF5900565254 /* Date+DateFormatter.swift in Sources */,
 				8429C9DF1EAECD2C004A5E2B /* NotesViewController.swift in Sources */,
+				F64DC6C522628BB700565254 /* UIWindow+PresentedViewController.swift in Sources */,
 				8429C9E21EAECD34004A5E2B /* TestApp.xcdatamodeld in Sources */,
-				27248B5B223701D000344333 /* NotesPresenter.swift in Sources */,
+				27248B5B223701D000344333 /* NotesViewModel.swift in Sources */,
+				F64DC6BA226274F400565254 /* Note.swift in Sources */,
+				F64DC6CD2262B56300565254 /* CreateNoteViewModel.swift in Sources */,
+				F64DC6C922629AB700565254 /* Storyboards.swift in Sources */,
+				F64DC6CB2262A97200565254 /* CreateNoteViewController.swift in Sources */,
 				8429C9C71EAECCA8004A5E2B /* AppDelegate.swift in Sources */,
-				8429C9E41EAECD48004A5E2B /* Note.swift in Sources */,
+				F64DC6BD22627FAF00565254 /* NoteTableViewCell.swift in Sources */,
+				F64DC6C022628AFF00565254 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +375,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = AUCWMQ5DFY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alayacare.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c8f191f5-e413-4a27-a984-27100765bc21";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -313,14 +393,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = AUCWMQ5DFY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alayacare.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c8f191f5-e413-4a27-a984-27100765bc21";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
